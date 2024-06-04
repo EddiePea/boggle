@@ -1,0 +1,14 @@
+{
+  "name": "boggle",
+  "version": "1.0.0",
+  "description": "A training game to practice my Express, Pug and JS",
+  "main": "boggle.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eddie Pea",
+  "license": "ISC"
+}
