@@ -7,8 +7,21 @@
     "lib": "lib"
   },
   "scripts": {
+    "start": "npx nodemon boggle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Eddie Pea",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "connect-loki": "^1.2.0",
+    "express": "^4.19.2",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.18.0",
+    "express-validator": "^7.1.0",
+    "morgan": "^1.10.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
 }

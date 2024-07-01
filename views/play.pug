@@ -1,0 +1,36 @@
+extends layout
+
+block content 
+  .game-controls
+    form(action="/new-game" method="post")
+      button(type="submit") New Game
+
+  .game-container
+    .boggle-container
+      each letter in board
+        .boggle-tile
+          = letter 
+
+  .container
+    .word-box 
+      form(action="/play" method="post")
+        dl 
+          dt 
+            label(for="word") Enter new word: 
+          dd 
+            input(type="text"
+                  name="word"
+                  placeholder="new word"
+                  value=word)
+        dd 
+          button(type="submit") Submit 
+
+    .word-list-section
+      h2.word-list-title Word List
+      .word-list-container  
+        .word-list
+          ul
+            each word, index in player.wordStore
+              li #{word} - #{player.getWordScore(word)}
+      h3.total-score Total Score: <span>#{player.getTotalScore()}</span>
+
